@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strip CSS generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.mjs" type="module"></script>
+
+    <style id="previewStyle"></style>
+  </head>
+
+  <body>
+    <main>
+      <h1>Strip CSS generator</h1>
+      <p>Enter a list of CSS colors and the flag on the top right will update in real time. Then when you're happy, copy
+        and paste for your web site.</p>
+      <section id="controls">
+        <div><label for="width">Strip width:</label><input size="4" type="number" min="0" value="10" step="0.1"
+            id="width"></div>
+        <!-- <div><label for="position">Position:</label><select id="position">
+            <option value="tr">Top Right</option>
+            <option value="tl">Top Left</option>
+            <option value="br">Bottom Right</option>
+            <option value="bl">Bottom Left</option>
+          </select></div> -->
+        <!-- <label for="strips">Strips</label> -->
+        <textarea aria-description="The list of CSS colors for the generated CSS" id="strips"
+          placeholder="The list of CSS colors for the generated CSS"></textarea>
+      </section>
+      <button id="copy" onclick="copyCSS()">Copy CSS</button>
+      <pre id="cssPreview">/* requires JavaScript to render this CSS */</pre>
+
+      <footer>
+        <p>Built by <a href="https://remysharp.com">@rem</a>, pinched from the <a
+            href="https://front-end.social/">front-end.social</a> mastodon instance 💜
+        </p>
+      </footer>
+    </main>
+    <!-- <aside id="preview">preview area</aside> -->
+  </body>
+
+</html>
